@@ -15,13 +15,19 @@ const handleUserInput  = (input) => {
       process.exit();
     } else if (key === "\033[A") {
       connection.write("Move: up");
+     
     } else if (key === "\033[B") {
       connection.write("Move: down");
+      
     }else if (key === "\033[D") {
-      connection.write("Move: left")
+      connection.write("Move: left");
+      
     }else if (key === "\033[C") {
       connection.write("Move: right")
-    }
+      
+    }else if (key.toLowerCase() === "y"){
+      connection.write("testing");
+    } 
       
   })
 };
